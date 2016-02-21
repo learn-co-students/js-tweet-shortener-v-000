@@ -1,11 +1,11 @@
 'use strict';
 
-describe('tweetShortener', function() {
+describe('TweetShortener', function() {
 
   it('replaces long words with their expected short form', function() {
     var tweet = "Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!";
     var substituded_tweet = "Hey guys, can anyone teach me how 2 b cool? I really want 2 b the best @ everything, u know what I mean? Tweeting is super fun u guys!!!!";
-    expect(tweetShortener.wordSubstituter(tweet)).toEqual(substituded_tweet);
+    expect(TweetShortener.prototype.wordSubstituter(tweet)).toEqual(substituded_tweet);
   });
 
   it('shortens tweets in bulk', function(){
@@ -23,7 +23,7 @@ describe('tweetShortener', function() {
 
     var tweets = [tweet_one, tweet_two, tweet_three, tweet_four, tweet_five];
     var shortened_tweets = [tweet_one_short, tweet_two_short, tweet_three_short, tweet_four_short, tweet_five_short];
-    expect(tweetShortener.bulkShortener(tweets)).toEqual(shortened_tweets);
+    expect(TweetShortener.prototype.bulkShortener(tweets)).toEqual(shortened_tweets);
   });
 
   it('shortens tweets longer than 140 characters only', function(){
@@ -32,15 +32,15 @@ describe('tweetShortener', function() {
     var over140Too = "GUISEEEEE this is so fun! I'm tweeting for you guys and this tweet is SOOOO long it's gonna be way more than you would think twitter can handle, so shorten it up you know what I mean? I just can never tell how long to keep typing!";
     var under140Too = "New game. Middle aged tweet followed by #youngPeopleHashTag Example: Gotta get my colonoscopy and mammogram soon. Prevention is key! #swag";
 
-    expect(tweetShortener.selectiveShortener(over140).length).toBeLessThan(over140.length);
-    expect(tweetShortener.selectiveShortener(under140).length).toEqual(under140.length);
-    expect(tweetShortener.selectiveShortener(over140Too).length).toBeLessThan(over140Too.length);
-    expect(tweetShortener.selectiveShortener(under140Too).length).toEqual(under140Too.length);
+    expect(TweetShortener.prototype.selectiveShortener(over140).length).toBeLessThan(over140.length);
+    expect(TweetShortener.prototype.selectiveShortener(under140).length).toEqual(under140.length);
+    expect(TweetShortener.prototype.selectiveShortener(over140Too).length).toBeLessThan(over140Too.length);
+    expect(TweetShortener.prototype.selectiveShortener(under140Too).length).toEqual(under140Too.length);
   });
 
   it("truncates tweets over 140 characters after shortening", function(){
     var longTweet = "GUISEEEEE this is so fun! I'm tweeting for you guys and this tweet is SOOOO long it's gonna be way more than you would think twitter can handle, so shorten it up you know what I mean? I just can never tell how long to keep typing!";
-    var shortenedTweet = tweetShortener.shortenedTruncator(longTweet);
+    var shortenedTweet = TweetShortener.prototype.shortenedTruncator(longTweet);
     expect(shortenedTweet.length).toEqual(140);
     // checking if the string ends in '...'
     expect(shortenedTweet.indexOf('...', shortenedTweet.length - '...'.length)).not.toEqual(-1);
@@ -50,6 +50,6 @@ describe('tweetShortener', function() {
 
   it("keeps shortened tweets at their original lengths", function(){
     var shortTweet = "I like short tweets and I cannot lie";
-    expect(tweetShortener.shortenedTruncator(shortTweet).length).toEqual(shortTweet.length);
+    expect(TweetShortener.prototype.shortenedTruncator(shortTweet).length).toEqual(shortTweet.length);
   });
 });
