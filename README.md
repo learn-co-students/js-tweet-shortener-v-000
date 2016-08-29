@@ -99,26 +99,9 @@ learn -b
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-tweet-shortener' title='Tweet Shortener'>Tweet Shortener</a> on Learn.co and start learning to code for free.</p>
 
 
-
-
-'use strict';
-
-var tweetShortener = {
-  wordSubstituter: function(tweet){
-    var tweet = tweet
-    var res = tweet.replace(/hello/gi, "hi");
-    res = res.replace(/to/gi, "2");
-    res = res.replace(/two/gi, "2");
-    res = res.replace(/too/gi, "2");
-    res = res.replace(/for/gi, "4");
-    res = res.replace(/four/gi, "4");
-    res = res.replace(/\bbe\b/gi, "b");
-    res = res.replace(/you/gi, "u");
-    res = res.replace(/\bat\b/gi, "@");
-    res = res.replace(/and/gi, "&");
-    return res;
-  },
-  bulkShortener: function(){},
-  selectiveShortener: function(){},
-  shortenedTruncator: function(){}
-};
+    var newTweet = tweetShortener.selectiveShortener(tweet)
+    if (newTweet.length > 140){
+      var ellipsis = "..."
+      var tempTweet = newTweet[0..137]
+      return tempTweet + ellipsis;
+    }
