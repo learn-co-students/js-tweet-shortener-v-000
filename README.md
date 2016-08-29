@@ -97,3 +97,11 @@ learn -b
 ```
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/js-tweet-shortener' title='Tweet Shortener'>Tweet Shortener</a> on Learn.co and start learning to code for free.</p>
+
+
+    var newTweet = tweetShortener.selectiveShortener(tweet)
+    if (newTweet.length > 140){
+      var ellipsis = "..."
+      var tempTweet = newTweet[0..137]
+      return tempTweet + ellipsis;
+    }
