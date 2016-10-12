@@ -19,7 +19,7 @@ describe('tweetShortener', function() {
     var tweet_two_short = "OMG u guys, u won't believe how sweet my kitten is. My kitten is like super cuddly & 2 cute 2 b believed right?";
     var tweet_three_short = "GUISEEEEE this is so fun! I'm tweeting 4 u guys & this tweet is SOOOO long it's gonna b way more than u would think twitter can handle, so shorten it up u know what I mean? I just can never tell how long 2 keep typing!";
     var tweet_four_short = "New game. Middle aged tweet followed by #youngPeopleHashTag Example: Gotta get my colonoscopy & mammogram soon. Prevention is key! #swag";
-    var tweet_five_short = "I'm running out of example tweets 4 u guys, which is weird, because I'm a writer & this is just writing & I tweet all day. 4 real, u guys. 4 real.";
+    var tweet_five_short = "I'm running out of example tweets 4 u guys, which is weird, because I'm a writer & this is just writing & I tweet all day. For real, u guys. For real.";
 
     var tweets = [tweet_one, tweet_two, tweet_three, tweet_four, tweet_five];
     var shortened_tweets = [tweet_one_short, tweet_two_short, tweet_three_short, tweet_four_short, tweet_five_short];
