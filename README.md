@@ -1,5 +1,9 @@
 # Tweet Shortener
-
+var hello = "hello"; var hi = "hi";
+var to = "to"; var two = "two"; var too = "too"; var num_2 = "2";
+var four = "four"; var for_word = "for"; var num_4 = "4";
+var be = "be"; var b = "b"; var you = "you"; var u = "u";
+var at = "at"; var sym_at = "@"; var and = "and"; var sym_and = "&";
 Instead of using prototypes and constructors in this lab, we'll be using a javascript object with functions attached. (You'll sometimes hear this referred to as "object literal" notation, because it uses an object — literally.)
 
 In Ruby, modules can be used to hold methods that act on the values passed to it, and nothing else.
