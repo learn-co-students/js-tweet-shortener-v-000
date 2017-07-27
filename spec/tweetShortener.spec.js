@@ -23,6 +23,7 @@ describe('tweetShortener', function() {
 
     var tweets = [tweet_one, tweet_two, tweet_three, tweet_four, tweet_five];
     var shortened_tweets = [tweet_one_short, tweet_two_short, tweet_three_short, tweet_four_short, tweet_five_short];
+
     expect(tweetShortener.bulkShortener(tweets)).toEqual(shortened_tweets);
   });
 
